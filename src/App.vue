@@ -1,13 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppNavbar from './components/layout/AppNavbar.vue'
+</script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    |
-    <RouterLink to="/projects">Projects</RouterLink>
-    |
-    <RouterLink to="/about">About</RouterLink>
-  </nav>
+  <AppNavbar />
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
