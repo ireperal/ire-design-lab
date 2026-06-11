@@ -1,5 +1,114 @@
-# Vue 3 + TypeScript + Vite
+# 💜 Ire Design Lab
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Portfolio personal de **Irene Peral**, UX/UI Designer & Frontend Developer.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+> ✨ Del wireframe al componente.
+> 💜 Entre Figma y Vue.
+
+---
+
+## 🚀 Sobre el proyecto
+
+**Ire Design Lab** es mi espacio personal para mostrar proyectos de diseño UX/UI y desarrollo frontend.
+
+Este portfolio nace con el objetivo de reunir en un mismo lugar mis proyectos, casos de estudio y experimentos, reflejando un perfil híbrido entre diseño y desarrollo.
+
+Aquí podrás encontrar:
+
+* 🎨 Proyectos UX/UI diseñados en Figma
+* 💻 Aplicaciones desarrolladas con Vue
+* ♿ Soluciones centradas en accesibilidad
+* 📚 Mi evolución profesional como Tech Designer
+
+---
+
+## 🛠️ Tecnologías
+
+Este proyecto está construido con:
+
+* Vue 3
+* TypeScript
+* Vite
+* Vue Router
+* Pinia
+* Tailwind CSS
+
+---
+
+## 📂 Estructura del proyecto
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── layout/
+│   └── ui/
+├── data/
+├── router/
+├── stores/
+├── types/
+└── views/
+```
+
+---
+
+## 🖥️ Desarrollo local
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/ireperal/ire-design-lab.git
+```
+
+Acceder al proyecto:
+
+```bash
+cd ire-design-lab
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Iniciar entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🎯 Objetivos del portfolio
+
+* Mostrar proyectos UX/UI y Frontend.
+* Documentar procesos de diseño.
+* Publicar casos de estudio completos.
+* Practicar desarrollo moderno con Vue y TypeScript.
+* Construir una marca personal sólida dentro del mundo Tech Design.
+
+---
+
+## 👩‍💻 Sobre mí
+
+Soy Irene Peral, diseñadora UX/UI y desarrolladora frontend en formación.
+
+Me apasiona crear experiencias digitales accesibles, intuitivas y visualmente cuidadas, combinando investigación, diseño y desarrollo para construir productos centrados en las personas.
+
+---
+
+## 📬 Contacto
+
+* LinkedIn: https://www.linkedin.com/in/ireperal/
+* GitHub: https://github.com/ireperal
+
+---
+
+⭐ Proyecto actualmente en desarrollo.
