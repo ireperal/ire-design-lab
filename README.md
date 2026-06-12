@@ -96,19 +96,4 @@ http://localhost:5173
 
 ---
 
-## 👩‍💻 Sobre mí
-
-Soy Irene Peral, diseñadora UX/UI y desarrolladora frontend en formación.
-
-Me apasiona crear experiencias digitales accesibles, intuitivas y visualmente cuidadas, combinando investigación, diseño y desarrollo para construir productos centrados en las personas.
-
----
-
-## 📬 Contacto
-
-* LinkedIn: https://www.linkedin.com/in/ireperal/
-* GitHub: https://github.com/ireperal
-
----
-
 ⭐ Proyecto actualmente en desarrollo.
