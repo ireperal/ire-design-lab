@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import ProjectCard from '../components/ui/ProjectCard.vue'
+import { projects } from '../data/projects'
 </script>
 
 <template>
   <section
     class="mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6"
   >
-    <div class="max-w-3xl">
+    <!-- Hero -->
+    <div class="mb-24 max-w-3xl">
       <p class="mb-4 text-lg text-purple-600">
         👋 Hola, soy Irene
       </p>
@@ -18,38 +21,32 @@
         & Frontend Developer
       </h1>
 
-      <p
-        class="mb-6 text-2xl font-semibold text-slate-700 md:text-3xl"
-      >
+      <p class="mb-6 text-2xl font-semibold text-slate-700">
         ✨ Del wireframe al componente.
       </p>
 
-      <p
-        class="mb-10 max-w-2xl text-lg leading-relaxed text-slate-600"
-      >
-        Diseño experiencias accesibles y construyo interfaces modernas
-        utilizando Vue3, TypeScript y principios centrados en el usuario.
+      <p class="mb-6 text-lg text-slate-600">
+        Diseño experiencias accesibles y construyo interfaces modernas.
       </p>
 
-      <p class="mb-10 text-lg font-medium text-purple-600">
+      <p class="text-lg font-medium text-purple-600">
         💜 Entre Figma y Vue.
       </p>
-
-      <div class="flex gap-4">
-        <RouterLink
-          to="/projects"
-          class="rounded-xl bg-purple-600 px-6 py-3 font-medium text-white transition hover:scale-105"
-        >
-          Ver proyectos
-        </RouterLink>
-
-        <RouterLink
-          to="/about"
-          class="rounded-xl border border-slate-300 px-6 py-3 font-medium text-slate-700 transition hover:border-purple-600 hover:text-purple-600"
-        >
-          Sobre mí
-        </RouterLink>
-      </div>
     </div>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="mb-8 text-3xl font-bold text-slate-900">
+        Proyectos destacados
+      </h2>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.id"
+          :project="project"
+        />
+      </div>
+    </section>
   </section>
 </template>
