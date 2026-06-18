@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import ProjectCard from '../components/ui/ProjectCard.vue'
+import FeaturedProject from '../components/ui/FeaturedProject.vue'
+
 import { projects } from '../data/projects'
+
+const featuredProject = projects.find(
+  project => project.featured,
+)
+
+const otherProjects = projects.filter(
+  project => !project.featured,
+)
 </script>
 
 <template>
@@ -34,19 +44,30 @@ import { projects } from '../data/projects'
       </p>
     </div>
 
+    <section class="mb-24">
+      <FeaturedProject
+        v-if="featuredProject"
+        :project="featuredProject"
+      />
+    </section>
+
     <!-- Projects -->
     <section>
-      <h2 class="mb-8 text-3xl font-bold text-slate-900">
-        Proyectos destacados
-      </h2>
+  <h2
+    class="mb-8 text-3xl font-bold text-slate-900"
+  >
+    Otros proyectos
+  </h2>
 
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <ProjectCard
-          v-for="project in projects"
-          :key="project.id"
-          :project="project"
-        />
-      </div>
-    </section>
+  <div
+    class="grid gap-8 md:grid-cols-2"
+  >
+    <ProjectCard
+      v-for="project in otherProjects"
+      :key="project.id"
+      :project="project"
+    />
+  </div>
+</section>
   </section>
 </template>
