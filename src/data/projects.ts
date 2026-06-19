@@ -1,10 +1,14 @@
 import type { Project } from '../types/project.ts'
 
+import mapawCover from '../assets/images/projects/mapaw/cover.webp'
+import colorbuddyCover from '../assets/images/projects/colorbuddy/cover.webp'
+import bloompalCover from '../assets/images/projects/bloompal/cover.webp'
+
 export const projects: Project[] = [
   {
     id: 'mapaw',
     title: 'Mapaw',
-    image: '/images/projects/mapaw-cover.webp',
+    image: mapawCover,
     featured: true,
     tagline: 'Explora el mundo junto a tu mascota.',
     description:
@@ -24,7 +28,7 @@ export const projects: Project[] = [
   {
     id: 'colorbuddy',
     title: 'ColorBuddy',
-    image: '/images/projects/colorbuddy-cover.webp',
+    image: colorbuddyCover,
     featured: false,
     tagline: 'Combina colores con confianza.',
     description:
@@ -43,7 +47,7 @@ export const projects: Project[] = [
   {
     id: 'bloompal',
     title: 'BloomPal',
-    image: '/images/projects/bloompal-cover.webp',
+    image: bloompalCover,
     featured: false,
     tagline: 'Cuida tus plantas sin olvidarte de ellas.',
     description:
