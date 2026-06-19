@@ -51,10 +51,11 @@ defineProps<{
       </span>
     </div>
 
-    <button
+    <RouterLink
+      :to="`/projects/${project.id}`"
       class="font-medium text-purple-600 transition hover:text-purple-800"
     >
       Ver caso de estudio →
-    </button>
+    </RouterLink>
   </article>
 </template>
