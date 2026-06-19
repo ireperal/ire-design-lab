@@ -8,22 +8,22 @@ defineProps<{
 
 <template>
   <section
-    class="overflow-hidden rounded-4xl border border-slate-200 bg-white"
+    class="group overflow-hidden rounded-4xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg"
   >
     <div class="grid gap-10 p-8 lg:grid-cols-2 lg:p-12">
       <div
-        class="flex aspect-video items-center justify-center rounded-3xl bg-slate-100"
+        class="aspect-video overflow-hidden rounded-3xl bg-slate-100"
       >
         <img
           :src="project.image"
           :alt="project.title"
-          class="h-full w-full object-cover"
+          class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         >
       </div>
 
       <div class="flex flex-col justify-center">
         <span
-          class="mb-4 w-fit rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700"
+          class="mb-4 w-fit rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700 transition-colors duration-300 group-hover:bg-purple-200"
         >
           ⭐ Proyecto destacado
         </span>
@@ -56,11 +56,12 @@ defineProps<{
           </span>
         </div>
 
-        <button
-          class="w-fit rounded-xl bg-purple-600 px-6 py-3 font-medium text-white transition hover:scale-105"
+        <RouterLink
+          :to="`/projects/${project.id}`"
+          class="w-fit rounded-xl bg-purple-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
         >
           Descubrir Mapaw →
-        </button>
+        </RouterLink>
       </div>
     </div>
   </section>
