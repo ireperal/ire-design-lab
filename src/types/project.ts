@@ -5,6 +5,9 @@ export interface Project {
   featured: boolean
   tagline: string
   description: string
+  problem: string
+  solution: string
+  role: string[]
   technologies: string[]
   figmaUrl?: string
   tags: string[]

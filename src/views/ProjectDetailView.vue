@@ -14,41 +14,77 @@ const project = computed(() =>
 </script>
 
 <template>
-  <section
-    v-if="project"
-    class="mx-auto max-w-6xl px-6 py-20"
+<h1>
+  {{ project?.title }}
+</h1>
+
+<p
+  class="mb-8 text-xl text-purple-600"
+>
+  {{ project?.tagline }}
+</p>
+
+<img
+  :src="project?.image"
+  :alt="project?.title"
+  class="mb-8 w-full rounded-3xl"
+>
+
+<p
+  class="mb-16 max-w-3xl text-lg text-slate-600"
+>
+  {{ project?.description }}
+</p>
+
+<!-- Problema -->
+
+<section class="mb-16">
+  <h2
+    class="mb-4 text-3xl font-bold text-slate-900"
   >
-    <h1
-      class="mb-4 text-5xl font-bold"
-    >
-      {{ project.title }}
-    </h1>
+    🎯 El problema
+  </h2>
 
-    <p
-      class="mb-8 text-xl text-purple-600"
-    >
-      {{ project.tagline }}
-    </p>
-
-    <img
-      :src="project.image"
-      :alt="project.title"
-      class="mb-8 w-full rounded-3xl"
-    >
-
-    <p
-      class="max-w-3xl text-lg text-slate-600"
-    >
-      {{ project.description }}
-    </p>
-  </section>
-
-  <section
-    v-else
-    class="mx-auto max-w-4xl px-6 py-20"
+  <p
+    class="max-w-3xl text-lg leading-relaxed text-slate-600"
   >
-    <h1 class="text-4xl font-bold">
-      Proyecto no encontrado
-    </h1>
-  </section>
+    {{ project?.problem }}
+  </p>
+</section>
+
+<!-- Solución -->
+
+<section class="mb-16">
+  <h2
+    class="mb-4 text-3xl font-bold text-slate-900"
+  >
+    💡 La solución
+  </h2>
+
+  <p
+    class="max-w-3xl text-lg leading-relaxed text-slate-600"
+  >
+    {{ project?.solution }}
+  </p>
+</section>
+
+<!-- Mi rol -->
+
+<section>
+  <h2
+    class="mb-6 text-3xl font-bold text-slate-900"
+  >
+    🛠️ Mi rol
+  </h2>
+
+  <div class="flex flex-wrap gap-3">
+    <span
+      v-for="item in project?.role"
+      :key="item"
+      class="rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700"
+    >
+      {{ item }}
+    </span>
+  </div>
+</section>
 </template>
