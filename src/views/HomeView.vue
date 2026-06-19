@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ProjectCard from '../components/ui/ProjectCard.vue'
 import FeaturedProject from '../components/ui/FeaturedProject.vue'
+import AboutPreview from '../components/ui/AboutPreview.vue'
 
 import { projects } from '../data/projects'
 
@@ -68,6 +69,9 @@ const otherProjects = projects.filter(
       :project="project"
     />
   </div>
+<section class="mt-24 mb-32">
+  <AboutPreview />
+</section>
 </section>
   </section>
 </template>
