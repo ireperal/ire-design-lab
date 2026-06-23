@@ -3,7 +3,7 @@
 
 <template>
   <header
-    class="sticky top-0 border-b border-gray-200 bg-white/80 backdrop-blur"
+    class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur"
   >
     <nav
       class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
