@@ -14,27 +14,55 @@ const project = computed(() =>
 </script>
 
 <template>
-<h1>
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="relative mb-16 h-32 overflow-hidden">
+      <img
+        :src="project?.colors"
+        :alt="project?.title"
+        class="h-full w-full object-cover"
+      >
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+      />
+    </div>
+  
+    <h1 class="mb-4 text-5xl font-bold">
   {{ project?.title }}
 </h1>
 
 <p
-  class="mb-8 text-xl text-purple-600"
+      class="mb-16 text-xl text-purple-600"
 >
   {{ project?.tagline }}
 </p>
 
-<img
-  :src="project?.image"
-  :alt="project?.title"
-  class="mb-8 w-full rounded-3xl"
+    <section
+      v-if="project?.mockups?.length"
+      class="mb-16"
+    >
+      <div
+        class="grid gap-6 md:grid-cols-2"
+      >
+        <div
+          v-for="mockup in project.mockups"
+          :key="mockup.title"
+          class="group flex flex-col items-center overflow-hidden"
 >
-
-<p
-  class="mb-16 max-w-3xl text-lg text-slate-600"
+          <h3
+            class="mb-4 text-center text-lg font-semibold transition-colors duration-300 group-hover:text-purple-500"
 >
-  {{ project?.description }}
-</p>
+            {{ mockup.title }}
+          </h3>
+          <img
+            :src="mockup.image"
+            :alt="mockup.title"
+            class="w-full scale-95 rounded-3xl border border-slate-200 shadow-lg transition-all duration-300 hover:scale-100 hover:shadow-2xl"
+            @click="selectedImage = mockup.image"
+          >
+    
+        </div>
+      </div>
+    </section>
 
 <!-- Problema -->
 

@@ -2,6 +2,8 @@ export interface Project {
   id: string
   title: string
   image: string
+  colors?: string
+  mockups?: { title: string; image: string }[]
   featured: boolean
   tagline: string
   description: string

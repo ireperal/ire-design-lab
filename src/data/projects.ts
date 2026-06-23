@@ -4,11 +4,40 @@ import mapawCover from '../assets/images/projects/mapaw/cover.webp'
 import colorbuddyCover from '../assets/images/projects/colorbuddy/cover.webp'
 import bloompalCover from '../assets/images/projects/bloompal/cover.webp'
 
+import mapawColors from '../assets/images/projects/mapaw/colors.png'
+import mapawMockup1 from '../assets/images/projects/mapaw/mockups/mockup-1.webp'
+import mapawMockup2 from '../assets/images/projects/mapaw/mockups/mockup-2.webp'
+import mapawMockup3 from '../assets/images/projects/mapaw/mockups/mockup-3.webp'
+import mapawMockup4 from '../assets/images/projects/mapaw/mockups/mockup-4.webp'
+
+import colorbuddyColors from '../assets/images/projects/colorbuddy/colors.png'
+
+import bloompalColors from '../assets/images/projects/bloompal/colors.png'
+
 export const projects: Project[] = [
   {
     id: 'mapaw',
     title: 'Mapaw',
     image: mapawCover,
+    colors: mapawColors,
+    mockups: [
+      {
+        title: 'Mapa principal',
+        image: mapawMockup1,
+      },
+      {
+        title: 'Detalle de reseña',
+        image: mapawMockup2,
+      },
+      {
+        title: 'Lista de favoritos',
+        image: mapawMockup3,
+      },
+      {
+        title: 'Crear comentario',
+        image: mapawMockup4,
+      },
+    ],
     featured: true,
     tagline: 'Explora el mundo junto a tu mascota.',
     description:
@@ -40,6 +69,7 @@ export const projects: Project[] = [
     id: 'colorbuddy',
     title: 'ColorBuddy',
     image: colorbuddyCover,
+    colors: colorbuddyColors,
     featured: false,
     tagline: 'Combina colores con confianza.',
     description:
@@ -70,6 +100,7 @@ export const projects: Project[] = [
     id: 'bloompal',
     title: 'BloomPal',
     image: bloompalCover,
+    colors: bloompalColors,
     featured: false,
     tagline: 'Cuida tus plantas sin olvidarte de ellas.',
     description:
