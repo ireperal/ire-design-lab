@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 import { projects } from '../data/projects'
@@ -11,6 +11,8 @@ const project = computed(() =>
     item => item.id === route.params.id,
   ),
 )
+
+const selectedImage = ref<string | null>(null)
 </script>
 
 <template>
@@ -27,15 +29,15 @@ const project = computed(() =>
     </div>
   
     <h1 class="mb-4 text-5xl font-bold">
-  {{ project?.title }}
-</h1>
-
-<p
+      {{ project?.title }}
+    </h1>
+  
+    <p
       class="mb-16 text-xl text-purple-600"
->
-  {{ project?.tagline }}
-</p>
-
+    >
+      {{ project?.tagline }}
+    </p>
+  
     <section
       v-if="project?.mockups?.length"
       class="mb-16"
@@ -47,10 +49,10 @@ const project = computed(() =>
           v-for="mockup in project.mockups"
           :key="mockup.title"
           class="group flex flex-col items-center overflow-hidden"
->
+        >
           <h3
             class="mb-4 text-center text-lg font-semibold transition-colors duration-300 group-hover:text-purple-500"
->
+          >
             {{ mockup.title }}
           </h3>
           <img
@@ -63,56 +65,89 @@ const project = computed(() =>
         </div>
       </div>
     </section>
-
-<!-- Problema -->
-
-<section class="mb-16">
-  <h2
-    class="mb-4 text-3xl font-bold text-slate-900"
-  >
-    🎯 El problema
-  </h2>
-
-  <p
-    class="max-w-3xl text-lg leading-relaxed text-slate-600"
-  >
-    {{ project?.problem }}
-  </p>
-</section>
-
-<!-- Solución -->
-
-<section class="mb-16">
-  <h2
-    class="mb-4 text-3xl font-bold text-slate-900"
-  >
-    💡 La solución
-  </h2>
-
-  <p
-    class="max-w-3xl text-lg leading-relaxed text-slate-600"
-  >
-    {{ project?.solution }}
-  </p>
-</section>
-
-<!-- Mi rol -->
-
-<section>
-  <h2
-    class="mb-6 text-3xl font-bold text-slate-900"
-  >
-    🛠️ Mi rol
-  </h2>
-
-  <div class="flex flex-wrap gap-3">
-    <span
-      v-for="item in project?.role"
-      :key="item"
-      class="rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700"
-    >
-      {{ item }}
-    </span>
+  
+    <!-- Problema -->
+  
+    <section class="mb-16">
+      <h2
+        class="mb-4 text-3xl font-bold text-slate-900"
+      >
+        🎯 El problema
+      </h2>
+  
+      <p
+        class="max-w-3xl text-lg leading-relaxed text-slate-600"
+      >
+        {{ project?.problem }}
+      </p>
+    </section>
+  
+    <!-- Solución -->
+  
+    <section class="mb-16">
+      <h2
+        class="mb-4 text-3xl font-bold text-slate-900"
+      >
+        💡 La solución
+      </h2>
+  
+      <p
+        class="max-w-3xl text-lg leading-relaxed text-slate-600"
+      >
+        {{ project?.solution }}
+      </p>
+    </section>
+  
+    <!-- Mi rol -->
+  
+      <section>
+        <h2
+          class="mb-6 text-3xl font-bold text-slate-900"
+        >
+          🛠️ Mi rol
+        </h2>
+    
+        <div class="flex flex-wrap gap-3">
+          <span
+            v-for="item in project?.role"
+            :key="item"
+            class="rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700"
+          >
+            {{ item }}
+          </span>
+        </div>
+      </section>
+      <Transition name="lightbox">
+        <div
+          v-if="selectedImage"
+          class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-sm"
+          @click="selectedImage = null"
+        >
+          <img
+            :src="selectedImage"
+            alt=""
+            class="max-h-[90vh] max-w-[90vw] rounded-3xl shadow-2xl"
+            @click.stop
+          >
+          <button
+            class="absolute right-6 top-6 cursor-pointer rounded-full bg-black/40 p-2 text-2xl text-white transition-all duration-200 hover:scale-110 hover:bg-black/60"
+            @click="selectedImage = null"
+          >
+            ✕
+          </button>
+        </div>
+      </Transition>
   </div>
-</section>
 </template>
+
+<style scoped>
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+  opacity: 0;
+}
+</style>
