@@ -15,11 +15,44 @@ import colorbuddyColors from '../assets/images/projects/colorbuddy/colors.png'
 import bloompalColors from '../assets/images/projects/bloompal/colors.png'
 
 export const projects: Project[] = [
-  {
+    {
     id: 'mapaw',
     title: 'Mapaw',
     image: mapawCover,
     colors: mapawColors,
+
+    featured: true,
+
+    tagline: 'Explora el mundo junto a tu mascota.',
+
+    description:
+      'Aplicación diseñada para descubrir lugares pet-friendly, guardar favoritos y compartir experiencias con otros usuarios.',
+
+    challenge:
+      'Diseñar una experiencia intuitiva que ayudara a los dueños de mascotas a encontrar espacios adaptados a sus necesidades.',
+
+    problem:
+      'Las personas con mascotas suelen tener dificultades para encontrar lugares realmente pet-friendly y conocer experiencias fiables antes de visitarlos.',
+
+    solution:
+      'Mapaw centraliza información sobre espacios pet-friendly mediante un mapa interactivo, favoritos y reseñas comunitarias.',
+
+    impact:
+      'La solución facilita la exploración de nuevos lugares y fomenta una comunidad basada en experiencias reales.',
+
+    platforms: [
+      'Desktop',
+      'Mobile',
+    ],
+
+    designProcess: [
+      'UX Research',
+      'User Flows',
+      'Wireframing',
+      'UI Design',
+      'Prototyping',
+    ],
+
     mockups: [
       {
         title: 'Mapa principal',
@@ -38,14 +71,7 @@ export const projects: Project[] = [
         image: mapawMockup4,
       },
     ],
-    featured: true,
-    tagline: 'Explora el mundo junto a tu mascota.',
-    description:
-      'Aplicación móvil que ayuda a las personas con mascotas a descubrir lugares pet-friendly, guardar favoritos y compartir experiencias con otros usuarios.',
-    problem:
-      'Las personas con mascotas suelen tener dificultades para encontrar lugares realmente pet-friendly y conocer experiencias fiables de otros usuarios antes de visitarlos.',
-    solution:
-      'Mapaw centraliza información sobre espacios pet-friendly, permitiendo descubrir nuevos lugares, guardar favoritos y compartir reseñas con la comunidad.',
+
     role: [
       'UX Research',
       'User Flows',
@@ -53,8 +79,11 @@ export const projects: Project[] = [
       'UI Design',
       'Prototyping',
     ],
-    figmaUrl: '',
-    technologies: ['Figma'],
+
+    technologies: [
+      'Figma',
+    ],
+
     tags: [
       'UX Research',
       'UI Design',
@@ -63,6 +92,7 @@ export const projects: Project[] = [
       'Community',
       'Pets',
     ],
+
     year: 2026,
   },
   {
