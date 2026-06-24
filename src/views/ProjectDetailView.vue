@@ -24,7 +24,7 @@ const selectedImage = ref<string | null>(null)
         class="h-full w-full object-cover"
       >
       <div
-        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+        class="pointer-events-none absolute inset-0"
       />
     </div>
   
@@ -58,7 +58,7 @@ const selectedImage = ref<string | null>(null)
           <img
             :src="mockup.image"
             :alt="mockup.title"
-            class="w-full scale-95 rounded-3xl border border-slate-200 shadow-lg transition-all duration-300 hover:scale-100 hover:shadow-2xl"
+            class="w-full scale-95 rounded-3xl border border-slate-200 transition-all duration-300 hover:scale-100"
             @click="selectedImage = mockup.image"
           >
     
@@ -126,7 +126,7 @@ const selectedImage = ref<string | null>(null)
           <img
             :src="selectedImage"
             alt=""
-            class="max-h-[90vh] max-w-[90vw] rounded-3xl shadow-2xl"
+            class="max-h-[90vh] max-w-[90vw] rounded-3xl"
             @click.stop
           >
           <button

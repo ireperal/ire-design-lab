@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <section
-    class="group overflow-hidden rounded-4xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg"
+    class="group overflow-hidden rounded-4xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-purple-200"
   >
     <div class="grid gap-10 p-8 lg:grid-cols-2 lg:p-12">
       <div
@@ -58,7 +58,7 @@ defineProps<{
 
         <RouterLink
           :to="`/projects/${project.id}`"
-          class="w-fit rounded-xl bg-purple-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          class="w-fit rounded-xl bg-purple-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:scale-105"
         >
           Descubrir Mapaw →
         </RouterLink>

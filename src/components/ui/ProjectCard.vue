@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <article
-    class="group rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg"
+    class="group rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-purple-200"
   >
     <div
       class="mb-4 aspect-video overflow-hidden rounded-2xl bg-slate-100"
