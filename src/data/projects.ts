@@ -32,10 +32,10 @@ export const projects: Project[] = [
       'Diseñar una experiencia intuitiva que ayudara a los dueños de mascotas a encontrar espacios adaptados a sus necesidades.',
 
     problem:
-      'Las personas con mascotas suelen tener dificultades para encontrar lugares realmente pet-friendly y conocer experiencias fiables antes de visitarlos.',
+      'Hoy en día, el término "pet-friendly" se utiliza de forma muy ambigua. Muchas personas con mascotas planifican una salida confiando en información incompleta y terminan encontrándose con restricciones inesperadas, como locales que solo aceptan animales en terraza o limitaciones según el tamaño de la mascota. A esto se suma la falta de una fuente de información centralizada y la desconfianza que generan las reseñas desactualizadas. Como consecuencia, organizar un plan con una mascota puede convertirse en una experiencia frustrante, haciendo que muchos tutores descarten salir por miedo a llevarse una mala experiencia.',
 
     solution:
-      'Mapaw centraliza información sobre espacios pet-friendly mediante un mapa interactivo, favoritos y reseñas comunitarias.',
+      'Mapaw nace para devolver la confianza y la espontaneidad a las salidas con nuestras mascotas. La aplicación reúne en un único lugar toda la información necesaria para descubrir espacios realmente pet-friendly, combinando geolocalización, filtros inteligentes y contenido generado por la comunidad. Gracias a ello, los usuarios pueden encontrar lugares adaptados a sus necesidades, consultar experiencias reales de otros tutores y guardar sus sitios favoritos para futuras visitas.',
 
     impact:
       'La solución facilita la exploración de nuevos lugares y fomenta una comunidad basada en experiencias reales.',
@@ -71,6 +71,27 @@ export const projects: Project[] = [
         image: mapawMockup4,
       },
     ],
+
+    features: [
+  {
+    icon: '🗺️',
+    title: 'Mapa interactivo',
+    description:
+      'Descubre cafeterías, restaurantes, hoteles, parques y tiendas pet-friendly cerca de ti mediante un mapa interactivo con filtros avanzados.',
+  },
+  {
+    icon: '⭐',
+    title: 'Reseñas reales',
+    description:
+      'Consulta experiencias compartidas por otros usuarios, incluyendo fotografías, comentarios y valoraciones actualizadas.',
+  },
+  {
+    icon: '❤️',
+    title: 'Favoritos',
+    description:
+      'Guarda tus lugares preferidos para planificar futuras salidas y acceder rápidamente a ellos cuando los necesites.',
+  },
+],
 
     role: [
       'UX Research',

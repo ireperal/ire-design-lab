@@ -26,6 +26,11 @@ export interface Project {
     title: string
     image: string
   }[]
+  features?: {
+  icon: string
+  title: string
+  description: string
+}[]
 
   // Project information
   role: string[]

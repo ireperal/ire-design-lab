@@ -84,19 +84,45 @@ const selectedImage = ref<string | null>(null)
   
     <!-- Solución -->
   
-    <section class="mb-16">
-      <h2
-        class="mb-4 text-3xl font-bold text-slate-900"
+<section class="mb-20">
+  <h2
+    class="mb-4 text-3xl font-bold text-slate-900"
+  >
+    💡 La solución
+  </h2>
+
+  <p
+    class="mb-10 max-w-4xl text-lg leading-relaxed text-slate-600"
+  >
+    {{ project?.solution }}
+  </p>
+
+  <div
+    class="grid gap-6 md:grid-cols-3"
+  >
+    <div
+      v-for="feature in project?.features"
+      :key="feature.title"
+      class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-purple-200 hover:shadow-2xl"
+    >
+      <div class="mb-4 text-4xl transition duration-300 group-hover:scale-110">
+        {{ feature.icon }}
+      </div>
+
+      <h3
+        class="mb-3 text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-purple-600"
       >
-        💡 La solución
-      </h2>
-  
+        {{ feature.title }}
+      </h3>
+
       <p
-        class="max-w-3xl text-lg leading-relaxed text-slate-600"
+        class="leading-relaxed text-slate-600"
       >
-        {{ project?.solution }}
+        {{ feature.description }}
       </p>
-    </section>
+    </div>
+  </div>
+</section>
   
     <!-- Mi rol -->
   
