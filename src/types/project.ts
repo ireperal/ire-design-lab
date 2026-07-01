@@ -5,6 +5,8 @@ export interface Project {
   // Hero
   image: string
   colors?: string
+  desktopImage?: string
+  mobileImage?: string
 
   // General info
   featured: boolean

@@ -66,7 +66,7 @@ const selectedImage = ref<string | null>(null)
       </div>
     </section>
   
-    <!-- Problema -->
+    <!-- the problem -->
   
     <section class="mb-16">
       <h2
@@ -82,56 +82,126 @@ const selectedImage = ref<string | null>(null)
       </p>
     </section>
   
-    <!-- Solución -->
+    <!-- the solution -->
   
-<section class="mb-20">
-  <h2
-    class="mb-4 text-3xl font-bold text-slate-900"
-  >
-    💡 La solución
-  </h2>
-
-  <p
-    class="mb-10 max-w-4xl text-lg leading-relaxed text-slate-600"
-  >
-    {{ project?.solution }}
-  </p>
-
-  <div
-    class="grid gap-6 md:grid-cols-3"
-  >
-    <div
-      v-for="feature in project?.features"
-      :key="feature.title"
-      class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-purple-200 hover:shadow-2xl"
-    >
-      <div class="mb-4 text-4xl transition duration-300 group-hover:scale-110">
-        {{ feature.icon }}
-      </div>
-
-      <h3
-        class="mb-3 text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-purple-600"
+    <section class="mb-16">
+      <h2
+        class="mb-4 text-3xl font-bold text-slate-900"
       >
-        {{ feature.title }}
-      </h3>
+        💡 La solución
+      </h2>
 
       <p
-        class="leading-relaxed text-slate-600"
+        class="mb-10 max-w-4xl text-lg leading-relaxed text-slate-600"
       >
-        {{ feature.description }}
+        {{ project?.solution }}
       </p>
-    </div>
-  </div>
-</section>
+
+      <div
+        class="grid gap-6 md:grid-cols-3"
+      >
+        <div
+          v-for="feature in project?.features"
+          :key="feature.title"
+          class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-purple-200 hover:shadow-2xl"
+        >
+          <div class="mb-4 text-4xl transition duration-300 group-hover:scale-110">
+            {{ feature.icon }}
+          </div>
+
+          <h3
+            class="mb-3 text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-purple-600"
+          >
+            {{ feature.title }}
+          </h3>
+
+          <p
+            class="leading-relaxed text-slate-600"
+          >
+            {{ feature.description }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- visual design -->
+
+    <section class="mb-16">
+      <h2
+        class="mb-4 text-3xl font-bold text-slate-900"
+      >
+        🎨 El diseño
+      </h2>
+
+      <p
+        class="mb-10 max-w-4xl text-lg leading-relaxed text-slate-600"
+      >
+        La identidad visual de Mapaw busca transmitir cercanía, confianza y una
+        experiencia agradable tanto para las personas como para sus mascotas. Se
+        utilizaron colores cálidos combinados con tonos naturales para reforzar la
+        sensación de comunidad y exploración.
+      </p>
+
+      <img
+        :src="project?.colors"
+        :alt="`${project?.title} color palette`"
+        class="w-full rounded-3xl border border-slate-200 shadow-lg"
+      >
+    </section>
+
+    <!-- desktop and mobile -->
+
+      <section class="mb-16">
+        <h2 class="mb-4 text-3xl font-bold">
+          💻 Versión Desktop
+        </h2>
+
+        <p
+          class="mb-8 max-w-4xl text-lg leading-relaxed text-slate-600"
+        >
+          La experiencia principal fue diseñada para escritorio, ofreciendo una
+          exploración cómoda del mapa, acceso rápido a las reseñas y una navegación
+          pensada para planificar rutas de forma visual.
+        </p>
+
+        <img
+          :src="project?.desktopImage"
+          class="rounded-3xl shadow-xl"
+        >
+      </section>
+      <section class="mb-16">
+        <h2 class="mb-4 text-3xl font-bold">
+          📱 Versión Mobile
+        </h2>
+
+        <p
+          class="mb-8 max-w-4xl text-lg leading-relaxed text-slate-600"
+        >
+          La interfaz también fue adaptada a dispositivos móviles manteniendo la
+          coherencia visual y priorizando las acciones más frecuentes durante el uso
+          en movimiento.
+        </p>
+
+        <img
+          :src="project?.mobileImage"
+          class="rounded-3xl shadow-xl"
+        >
+      </section>
   
     <!-- Mi rol -->
   
-      <section>
+      <section class="mb-16">
         <h2
           class="mb-6 text-3xl font-bold text-slate-900"
         >
           🛠️ Mi rol
         </h2>
+
+        <p
+          class="mb-6 max-w-4xl text-lg leading-relaxed text-slate-600"
+        >
+          Durante este proyecto participé en todas las fases del proceso de diseño, desde la investigación inicial hasta el prototipado final, tomando decisiones centradas en las necesidades de los usuarios y manteniendo la coherencia visual del producto.
+        </p>
     
         <div class="flex flex-wrap gap-3">
           <span
@@ -142,6 +212,20 @@ const selectedImage = ref<string | null>(null)
             {{ item }}
           </span>
         </div>
+      </section>
+
+    <!-- learnings -->
+    <section class="mb-16">
+      <h2 class="mb-4 text-3xl font-bold">
+        🌱 Lo que aprendí
+      </h2>
+
+      <p
+        class="mb-8 max-w-4xl text-lg leading-relaxed text-slate-600"
+      >
+        Mapaw fue el proyecto con el que consolidé mi forma de trabajar en UX/UI. Me permitió profundizar en investigación de usuarios, arquitectura de información y diseño de interfaces para dos plataformas diferentes. Además, reforzó mi interés por crear productos accesibles, visualmente cuidados y centrados en resolver problemas reales.
+      </p>
+
       </section>
       <Transition name="lightbox">
         <div

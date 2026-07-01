@@ -1,17 +1,23 @@
 import type { Project } from '../types/project.ts'
 
+// Mapaw project images
 import mapawCover from '../assets/images/projects/mapaw/cover.webp'
-import colorbuddyCover from '../assets/images/projects/colorbuddy/cover.webp'
-import bloompalCover from '../assets/images/projects/bloompal/cover.webp'
-
 import mapawColors from '../assets/images/projects/mapaw/colors.png'
+import mapawDesktopImage from '../assets/images/projects/mapaw/desktop.webp'
+import mapawMobileImage from '../assets/images/projects/mapaw/mobile.webp'
 import mapawMockup1 from '../assets/images/projects/mapaw/mockups/mockup-1.webp'
 import mapawMockup2 from '../assets/images/projects/mapaw/mockups/mockup-2.webp'
 import mapawMockup3 from '../assets/images/projects/mapaw/mockups/mockup-3.webp'
 import mapawMockup4 from '../assets/images/projects/mapaw/mockups/mockup-4.webp'
 
+
+// ColorBuddy project images
+import colorbuddyCover from '../assets/images/projects/colorbuddy/cover.webp'
 import colorbuddyColors from '../assets/images/projects/colorbuddy/colors.png'
 
+
+// BloomPal project images
+import bloompalCover from '../assets/images/projects/bloompal/cover.webp'
 import bloompalColors from '../assets/images/projects/bloompal/colors.png'
 
 export const projects: Project[] = [
@@ -20,6 +26,8 @@ export const projects: Project[] = [
     title: 'Mapaw',
     image: mapawCover,
     colors: mapawColors,
+    desktopImage: mapawDesktopImage,
+    mobileImage: mapawMobileImage,
 
     featured: true,
 
